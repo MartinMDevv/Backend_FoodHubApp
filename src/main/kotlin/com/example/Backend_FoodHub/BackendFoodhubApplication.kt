@@ -1,11 +1,12 @@
-package com.example.Backend_FoodHub
+package com.example.backend_foodhub
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class BackendFoodHubApplication
+class BackendFoodhubApplication
 
 fun main(args: Array<String>) {
-	runApplication<BackendFoodHubApplication>(*args)
+    runApplication<BackendFoodhubApplication>(*args)
+    print("Exito")
 }
