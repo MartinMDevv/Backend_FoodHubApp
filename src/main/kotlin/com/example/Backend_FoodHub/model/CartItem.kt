@@ -1,4 +1,23 @@
-package com.example.Backend_FoodHub.model
+package com.example.backend_foodhub.model
 
-class CartItem {
-}
+import jakarta.persistence.*
+
+@Entity
+@Table(name = "cart_items")
+data class CartItem(
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    val id: Long = 0,
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id", nullable = false)
+    val user: User,
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "product_id", nullable = false)
+    val product: Product,
+
+    @Column(nullable = false)
+    var quantity: Int = 1
+)

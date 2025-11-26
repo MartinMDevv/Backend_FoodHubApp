@@ -8,5 +8,5 @@ class BackendFoodhubApplication
 
 fun main(args: Array<String>) {
     runApplication<BackendFoodhubApplication>(*args)
-    print("Exito")
+    print("\n  *** Exito*** \n")
 }
